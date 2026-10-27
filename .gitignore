@@ -1,0 +1,28 @@
+# Python virtual environment
+.venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Pytest cache and reports
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Terraform local files (for future infrastructure work)
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
