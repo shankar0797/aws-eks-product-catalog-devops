@@ -1,28 +1,33 @@
-# Python virtual environment
-.venv/
+# Terraform local files
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
 
-# Python cache files
+# Local Terraform variables may contain sensitive values
+terraform/terraform.tfvars
+
+# Python
 __pycache__/
 *.py[cod]
+.venv/
 
-# Pytest cache and reports
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Environment variables and secrets
+# Environment secrets
 .env
 .env.*
 !.env.example
+# Temporary security testing files
+/Dockerfile.scout-test
+/product-catalog-sbom.json
+/sbom-1.0.1.json
 
-# IDE and operating system files
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
+# Temporary AWS authentication backups and patches
+/aws-auth-backup.yaml
+/aws-auth-patch.yaml
 
-# Terraform local files (for future infrastructure work)
-.terraform/
-*.tfstate
-*.tfstate.*
-*.tfplan
+# Local Terraform working directory and state
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/terraform.tfvars
