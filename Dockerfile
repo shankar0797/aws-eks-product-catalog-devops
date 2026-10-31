@@ -10,6 +10,9 @@ COPY app/requirements.txt ./requirements.txt
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Remove pip's bundled SBOM file that is confusing the image scan
+RUN rm -f /usr/local/lib/python3.13/site-packages/pip/_vendor/bom.cdx.json
+
 # Create a non-root application user
 RUN useradd --create-home --uid 10001 appuser
 
